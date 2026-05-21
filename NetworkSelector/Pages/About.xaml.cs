@@ -22,7 +22,7 @@ namespace NetworkSelector.Pages
             var version = package.Id.Version;
 
             APPVersion.Text = $"{version.Major}.{version.Minor}.{version.Build}";
-            //APPVersion.NavigateUri = new System.Uri($"https://github.com/SIXiaolong1117/NetworkSelector/releases/tag/{version.Major}.{version.Minor}.{version.Build}.{version.Revision}");
+            //APPVersion.NavigateUri = new System.Uri($"https://github.com/SIXiaolong1117/NetProfile-Switcher/releases/tag/{version.Major}.{version.Minor}.{version.Build}.{version.Revision}");
             //APPVersion.NavigateUri = new System.Uri($"https://www.microsoft.com/store/apps/9PDQC93R0WLF");
 
             GetList();

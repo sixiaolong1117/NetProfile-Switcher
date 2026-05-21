@@ -134,21 +134,21 @@
                         Grid.Column="0"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
-                        NavigateUri="https://raw.githubusercontent.com/SIXiaolong1117/NetworkSelector/master/PRIVACY" />
+                        NavigateUri="https://raw.githubusercontent.com/SIXiaolong1117/NetProfile-Switcher/master/PRIVACY" />
                     <HyperlinkButton
                         x:Uid="FeedbackBugs"
                         Grid.Row="1"
                         Grid.Column="0"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
-                        NavigateUri="https://github.com/SIXiaolong1117/NetworkSelector/issues" />
-                    <HyperlinkButton
+                        NavigateUri="https://github.com/SIXiaolong1117/NetProfile-Switcher/issues" />
+                    <!-- <HyperlinkButton
                         x:Uid="AboutWiki"
                         Grid.Row="2"
                         Grid.Column="0"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
-                        NavigateUri="https://about.sixiaolong.win/Project/Gateway-Switcher.html" />
+                        NavigateUri="https://about.sixiaolong.win/Project/Gateway-Switcher.html" /> -->
                     <HyperlinkButton
                         x:Uid="AboutRepo"
                         Grid.Row="3"
@@ -156,7 +156,7 @@
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         FontSize="14"
-                        NavigateUri="https://github.com/SIXiaolong1117/NetworkSelector" />
+                        NavigateUri="https://github.com/SIXiaolong1117/NetProfile-Switcher" />
                     <HyperlinkButton
                         x:Uid="AboutMITLicense"
                         Grid.Row="4"
@@ -164,7 +164,7 @@
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         FontSize="14"
-                        NavigateUri="https://raw.githubusercontent.com/SIXiaolong1117/NetworkSelector/master/LICENSE" />
+                        NavigateUri="https://raw.githubusercontent.com/SIXiaolong1117/NetProfile-Switcher/master/LICENSE" />
                 </Grid>
 
                 <TextBlock
@@ -255,13 +255,13 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <HyperlinkButton
+                        <!-- <HyperlinkButton
                             Grid.Row="0"
                             Grid.Column="0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"
                             Content="司晓龙 (SI Xiaolong)"
-                            NavigateUri="https://about.sixiaolong.win/" />
+                            NavigateUri="https://about.sixiaolong.win/" /> -->
                         <HyperlinkButton
                             Grid.Row="1"
                             Grid.Column="0"
@@ -334,8 +334,8 @@
                         Grid.Column="0"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
-                        Content="PInvoke.User32"
-                        NavigateUri="https://www.nuget.org/packages/PInvoke.User32/" />
+                        Content="Microsoft.Windows.CsWin32"
+                        NavigateUri="https://www.nuget.org/packages/Microsoft.Windows.CsWin32/" />
                 </Grid>
                 <TextBlock
                     x:Name="TipsTips"

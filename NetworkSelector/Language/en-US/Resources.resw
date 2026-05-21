@@ -133,7 +133,7 @@
     <value>About</value>
   </data>
   <data name="AboutNSRight.Text" xml:space="preserve">
-    <value>Gateway Switcher</value>
+    <value>NetProfile Switcher</value>
   </data>
   <data name="AboutNSRightTip.Text" xml:space="preserve">
     <value>© 2024 SI Xiaolong. Under MIT License.</value>
@@ -190,10 +190,10 @@
     <value>Appearance &amp; behavior</value>
   </data>
   <data name="AppTitle" xml:space="preserve">
-    <value>Gateway Switcher</value>
+    <value>NetProfile Switcher</value>
   </data>
   <data name="AppTitleTextBlock.Text" xml:space="preserve">
-    <value>Gateway Switcher</value>
+    <value>NetProfile Switcher</value>
   </data>
   <data name="backgroundMaterial.Header" xml:space="preserve">
     <value>Background Material:</value>
@@ -328,7 +328,7 @@
     <value>Grant Administrator Privileges</value>
   </data>
   <data name="NotAdminTips.Subtitle" xml:space="preserve">
-    <value>You need to run Gateway Selector with administrator privileges because command line commands require administrator access to modify network configuration.</value>
+    <value>You need to run NetProfile Switcher with administrator privileges because command line commands require administrator access to modify network configuration.</value>
   </data>
   <data name="NotAdminTips.Title" xml:space="preserve">
     <value>Operation Failed!</value>

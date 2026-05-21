@@ -133,7 +133,7 @@
     <value>关于</value>
   </data>
   <data name="AboutNSRight.Text" xml:space="preserve">
-    <value>网关切换器</value>
+    <value>NetProfile Switcher</value>
   </data>
   <data name="AboutNSRightTip.Text" xml:space="preserve">
     <value>© 2024 司晓龙. 使用 MIT License.</value>
@@ -190,10 +190,10 @@
     <value>外观与行为</value>
   </data>
   <data name="AppTitle" xml:space="preserve">
-    <value>网关切换器</value>
+    <value>NetProfile Switcher</value>
   </data>
   <data name="AppTitleTextBlock.Text" xml:space="preserve">
-    <value>网关切换器</value>
+    <value>NetProfile Switcher</value>
   </data>
   <data name="backgroundMaterial.Header" xml:space="preserve">
     <value>背景材料：</value>
@@ -328,7 +328,7 @@
     <value>给予管理员权限</value>
   </data>
   <data name="NotAdminTips.Subtitle" xml:space="preserve">
-    <value>您需要以管理员身份运行网关切换器 (Gateway Selector)，这是因为命令行命令需要在管理员权限下才可以修改网络配置信息。</value>
+    <value>您需要以管理员身份运行 NetProfile Switcher，这是因为命令行命令需要在管理员权限下才可以修改网络配置信息。</value>
   </data>
   <data name="NotAdminTips.Title" xml:space="preserve">
     <value>操作失败！</value>

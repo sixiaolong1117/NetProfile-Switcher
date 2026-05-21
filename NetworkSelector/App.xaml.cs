@@ -9,19 +9,22 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI.Xaml.Shapes;
+using Microsoft.Windows.ApplicationModel.Resources;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
-using Microsoft.Windows.ApplicationModel.Resources;
 using Microsoft.Windows.AppLifecycle;
-using Microsoft.Windows.ApplicationModel.Resources;
+using Windows.Win32;
+using Windows.Win32.Foundation;
+using Windows.Win32.UI.WindowsAndMessaging;
 
 namespace NetworkSelector
 {
     public partial class App : Application
     {
+        private static readonly HWND HwndTop = new(0);
+
         public App()
         {
             this.InitializeComponent();
@@ -45,12 +48,12 @@ namespace NetworkSelector
                 string appTitle = resourceLoader.GetString("AppTitle"); // 动态加载 AppTitle 资源
 
                 // 确保已激活的实例获得焦点并显示在前台
-                IntPtr existingHwnd = FindWindow(null, appTitle);  // 使用从资源文件加载的窗口标题查找窗口句柄
-                if (existingHwnd != IntPtr.Zero)
+                HWND existingHwnd = PInvoke.FindWindow(null, appTitle);  // 使用从资源文件加载的窗口标题查找窗口句柄
+                if (!existingHwnd.IsNull)
                 {
                     // 显示窗口并设置为前台
-                    PInvoke.User32.ShowWindow(existingHwnd, PInvoke.User32.WindowShowStyle.SW_RESTORE); // 如果窗口最小化，则恢复
-                    PInvoke.User32.SetForegroundWindow(existingHwnd); // 将窗口设为前台
+                    PInvoke.ShowWindow(existingHwnd, SHOW_WINDOW_CMD.SW_RESTORE); // 如果窗口最小化，则恢复
+                    PInvoke.SetForegroundWindow(existingHwnd); // 将窗口设为前台
                 }
 
                 // 退出当前实例
@@ -58,29 +61,25 @@ namespace NetworkSelector
             }
             m_window = new MainWindow();
             
-            IntPtr hwnd = WinRT.Interop.WindowNative.GetWindowHandle(m_window);
+            HWND hwnd = new(WinRT.Interop.WindowNative.GetWindowHandle(m_window));
 
             SetWindowSize(hwnd, 700, 500);
 
             m_window.Activate();
         }
 
-        private void SetWindowSize(IntPtr hwnd, int width, int height)
+        private void SetWindowSize(HWND hwnd, int width, int height)
         {
-            var dpi = PInvoke.User32.GetDpiForWindow(hwnd);
+            var dpi = PInvoke.GetDpiForWindow(hwnd);
             float scalingFactor = (float)dpi / 96;
             width = (int)(width * scalingFactor);
             height = (int)(height * scalingFactor);
 
-            PInvoke.User32.SetWindowPos(hwnd, PInvoke.User32.SpecialWindowHandles.HWND_TOP,
-                                        0, 0, width, height,
-                                        PInvoke.User32.SetWindowPosFlags.SWP_NOMOVE);
+            PInvoke.SetWindowPos(hwnd, HwndTop,
+                                 0, 0, width, height,
+                                 SET_WINDOW_POS_FLAGS.SWP_NOMOVE);
         }
 
         public static Window m_window;
-
-        // 通过窗口标题查找窗口句柄的方法
-        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
-        private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
     }
 }

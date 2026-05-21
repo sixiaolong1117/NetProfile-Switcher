@@ -284,7 +284,7 @@ namespace NetworkSelector.Pages
         private void SeletcThisConfig(NSModel model)
         {
             InProgressing.IsActive = true;
-            string cmd = $"netsh interface ip set address name='{model.Netinterface}' source=static addr='{model.IPAddr}' mask='{model.Mask}' gateway='{model.Gateway}'; netsh interface ip set dns name='{model.Netinterface}' source=static addr='{model.DNS1}' register=primary; netsh interface ip add dns name='{model.Netinterface}' addr='{model.DNS2}' index=2;";
+            string cmd = $"netsh interface ip set address name='{model.Netinterface}' source=static addr='{model.IPAddr}' mask='{model.Mask}' gateway='{model.Gateway}'; netsh interface ip set dns name='{model.Netinterface}' source=static addr='{model.DNS1}' register=primary; netsh interface ip add dns name='{model.Netinterface}' addr='{model.DNS2}' index=2; ipconfig /flushdns;";
             // 在子线程中执行任务
             Thread subThread = new Thread(new ThreadStart(() =>
                 {
@@ -324,7 +324,7 @@ namespace NetworkSelector.Pages
         private void SeletcDHCPConfig(string netInterface)
         {
             InProgressing.IsActive = true;
-            string cmd = $"netsh interface ip set address '{netInterface}' dhcp; netsh interface ip set dns name='{netInterface}' source=dhcp;";
+            string cmd = $"netsh interface ip set address '{netInterface}' dhcp; netsh interface ip set dns name='{netInterface}' source=dhcp; ipconfig /flushdns;";
             // 在子线程中执行任务
             Thread subThread = new Thread(new ThreadStart(() =>
             {

@@ -9,8 +9,10 @@
 
   <Identity
     Name="53093SIXiaolong.GatewaySelector"
-    Publisher="CN=SI Xiaolong"
-    Version="2.5.1.0" />
+    Publisher="CN=C2E30F83-9FC0-4E81-A5EE-358CB57A431B"
+    Version="2.6.1.0" />
+
+  <mp:PhoneIdentity PhoneProductId="a0a98cbe-9091-444d-994a-4ad8b4d956e0" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>ms-resource:AppTitle</DisplayName>

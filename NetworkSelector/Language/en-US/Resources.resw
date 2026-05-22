@@ -387,6 +387,9 @@
   <data name="Tips2.Text" xml:space="preserve">
     <value>Current Network Interface Information</value>
   </data>
+  <data name="Type53" xml:space="preserve">
+    <value>Proprietary virtual/internal</value>
+  </data>
   <data name="TypeEthernet" xml:space="preserve">
     <value>Ethernet</value>
   </data>

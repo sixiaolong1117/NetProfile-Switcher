@@ -12,8 +12,11 @@ namespace NetworkSelector.Datas
     {
         private string connectionString = "Data Source=ns.db";
 
-        public SQLiteHelper()
+        public SQLiteHelper() : this("Data Source=ns.db") { }
+
+        public SQLiteHelper(string connectionString)
         {
+            this.connectionString = connectionString;
             CreateTableIfNotExists();
         }
         // 建表

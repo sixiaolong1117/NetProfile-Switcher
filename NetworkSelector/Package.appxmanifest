@@ -9,7 +9,7 @@
   <Identity
     Name="53093SIXiaolong.GatewaySelector"
     Publisher="CN=C2E30F83-9FC0-4E81-A5EE-358CB57A431B"
-    Version="2.6.7.0" />
+    Version="2.6.10.0" />
 
   <Properties>
     <DisplayName>ms-resource:AppTitle</DisplayName>

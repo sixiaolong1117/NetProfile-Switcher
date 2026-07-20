@@ -393,4 +393,16 @@
   <data name="TypeWireless80211" xml:space="preserve">
     <value>无线 (IEEE 802.11)</value>
   </data>
+  <data name="NotificationIPv6IsDisable" xml:space="preserve">
+    <value>已禁用 IPv6</value>
+  </data>
+  <data name="NotificationIPv6IsEnable" xml:space="preserve">
+    <value>已启用 IPv6</value>
+  </data>
+  <data name="NotificationNetChange" xml:space="preserve">
+    <value>网络配置变更</value>
+  </data>
+  <data name="NotificationUACSuccessfully" xml:space="preserve">
+    <value>成功获取 UAC 权限</value>
+  </data>
 </root>

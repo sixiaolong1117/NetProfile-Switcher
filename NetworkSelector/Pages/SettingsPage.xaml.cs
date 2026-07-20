@@ -70,7 +70,7 @@ namespace NetworkSelector.Pages
         private bool languageStatusSetList()
         {
             // 读取本地设置数据，调整ComboBox状态
-            if (localSettings.Values["languageChange"] as string == "zh-Hans-CN")
+            if (localSettings.Values["languageChange"] as string == "zh-CN")
             {
                 languageChange.SelectedItem = language[0];
                 return true;
@@ -161,16 +161,16 @@ namespace NetworkSelector.Pages
             switch (languageStatus)
             {
                 case "简体中文":
-                    if (localSettings.Values["languageChange"] as string != "zh-Hans-CN")
+                    if (localSettings.Values["languageChange"] as string != "zh-CN")
                     {
-                        localSettings.Values["languageChange"] = "zh-Hans-CN";
+                        localSettings.Values["languageChange"] = "zh-CN";
                         ApplicationLanguages.PrimaryLanguageOverride = localSettings.Values["languageChange"] as string;
                         Windows.ApplicationModel.Resources.Core.ResourceContext.SetGlobalQualifierValue("Language", localSettings.Values["languageChange"] as string);
                         Microsoft.Windows.AppLifecycle.AppInstance.Restart("");
                     }
                     else
                     {
-                        localSettings.Values["languageChange"] = "zh-Hans-CN";
+                        localSettings.Values["languageChange"] = "zh-CN";
                     }
                     break;
                 case "English":

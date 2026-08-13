@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="NetworkSelector/Assets/StoreLogo.scale-200.png" alt="NetProfile Switcher" width="128">
+<img src="NetProfile-Switcher/Assets/StoreLogo.scale-200.png" alt="NetProfile Switcher" width="128">
 
 **基于 WinUI 3 的 Windows 网关预设切换工具<br/>在多个 IPv4 网络配置、DNS 与 DHCP 之间快速切换**
 
@@ -58,7 +58,7 @@ NetProfile Switcher 是一款面向 Windows 桌面的网络配置预设工具。
 git clone https://github.com/sixiaolong1117/NetProfile-Switcher.git
 ```
 
-2. 使用 Visual Studio 打开 `NetworkSelector.sln`。
+2. 使用 Visual Studio 打开 `NetProfile-Switcher.sln`。
 3. 还原 NuGet 包。
 4. 选择 `x64`、`x86` 或 `ARM64` 平台后运行或打包。
 

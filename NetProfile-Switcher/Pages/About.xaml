@@ -1,0 +1,361 @@
+<!--  Copyright (c) Microsoft Corporation and Contributors.  -->
+<!--  Licensed under the MIT License.  -->
+
+<Page
+    x:Class="NetProfileSwitcher.Pages.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:NetProfileSwitcher"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <!--  定义 ScrollViewer 的样式  -->
+        <Style x:Key="TransparentScrollViewerStyle" TargetType="ScrollViewer">
+            <!--  设置背景为透明  -->
+            <Setter Property="Background" Value="#11FFFFFF" />
+            <!--  设置边框为透明  -->
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <!--  设置边框厚度为0  -->
+            <Setter Property="BorderThickness" Value="0" />
+            <!--  设置圆角  -->
+            <Setter Property="CornerRadius" Value="4" />
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock
+            x:Name="Header"
+            x:Uid="AboutHeader"
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,24,0,8"
+            HorizontalAlignment="Center"
+            FontSize="24" />
+
+        <ScrollViewer Grid.Row="1" Padding="0,0,0,24">
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    x:Name="AboutNS"
+                    x:Uid="AboutNS"
+                    Grid.Row="0"
+                    Margin="24,18,0,8" />
+
+                <Grid
+                    Grid.Row="1"
+                    Margin="24,0,24,0"
+                    Padding="28,16,28,16"
+                    Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}"
+                    BorderThickness="0"
+                    CornerRadius="4,4,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Uid="AboutNSRight" Grid.Row="0" />
+                        <TextBlock
+                            x:Uid="AboutNSRightTip"
+                            Grid.Row="1"
+                            FontSize="12"
+                            Foreground="{ThemeResource SystemControlBackgroundBaseMediumBrush}" />
+                    </Grid>
+                    <TextBlock
+                        x:Name="APPVersion"
+                        Grid.Column="1"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        Foreground="{ThemeResource SystemControlBackgroundBaseMediumBrush}" />
+                </Grid>
+
+                <Grid
+                    Grid.Row="2"
+                    Margin="24,1,24,0"
+                    Padding="16"
+                    Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}"
+                    BorderThickness="0"
+                    CornerRadius="0,0,4,4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <HyperlinkButton
+                        x:Uid="PRIVACYLink"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        NavigateUri="https://raw.githubusercontent.com/SIXiaolong1117/NetProfile-Switcher/master/PRIVACY" />
+                    <HyperlinkButton
+                        x:Uid="FeedbackBugs"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        NavigateUri="https://github.com/SIXiaolong1117/NetProfile-Switcher/issues" />
+                    <!-- <HyperlinkButton
+                        x:Uid="AboutWiki"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        NavigateUri="https://about.sixiaolong.win/Project/Gateway-Switcher.html" /> -->
+                    <HyperlinkButton
+                        x:Uid="AboutRepo"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        NavigateUri="https://github.com/SIXiaolong1117/NetProfile-Switcher" />
+                    <HyperlinkButton
+                        x:Uid="AboutMITLicense"
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        NavigateUri="https://raw.githubusercontent.com/SIXiaolong1117/NetProfile-Switcher/master/LICENSE" />
+                </Grid>
+
+                <TextBlock
+                    x:Uid="AboutSponsor"
+                    Grid.Row="3"
+                    Margin="24,18,0,8" />
+
+                <Grid
+                    Grid.Row="4"
+                    Margin="24,1,24,0"
+                    Padding="16"
+                    Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}"
+                    BorderThickness="0"
+                    CornerRadius="4,4,4,4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <ScrollViewer
+                        Grid.Column="0"
+                        HorizontalAlignment="Stretch"
+                        Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}"
+                        CornerRadius="4">
+                        <TextBlock
+                            x:Name="NameList"
+                            Margin="8,8,8,8"
+                            TextWrapping="Wrap" />
+                    </ScrollViewer>
+                    <Grid Grid.Column="1" Margin="8,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <HyperlinkButton
+                            x:Name="AboutAliPay"
+                            x:Uid="AboutAliPay"
+                            Grid.Row="0"
+                            HorizontalAlignment="Left"
+                            Click="AboutAliPay_Click"
+                            FontSize="12" />
+                        <HyperlinkButton
+                            x:Name="AboutWePay"
+                            x:Uid="AboutWePay"
+                            Grid.Row="1"
+                            HorizontalAlignment="Left"
+                            Click="AboutWePay_Click"
+                            FontSize="12" />
+                    </Grid>
+                </Grid>
+
+                <TextBlock
+                    x:Uid="AboutAuthor"
+                    Grid.Row="5"
+                    Margin="24,18,0,8" />
+
+                <Grid
+                    Grid.Row="6"
+                    Margin="24,1,24,0"
+                    Padding="16"
+                    Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}"
+                    BorderThickness="0"
+                    CornerRadius="4,4,4,4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <PersonPicture
+                        Grid.Row="0"
+                        Margin="0,0,8,0"
+                        HorizontalAlignment="Right"
+                        DisplayName="SI Xiaolong"
+                        ProfilePicture="https://avatars.githubusercontent.com/u/59590732?v=4" />
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <!-- <HyperlinkButton
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Content="司晓龙 (SI Xiaolong)"
+                            NavigateUri="https://about.sixiaolong.win/" /> -->
+                        <HyperlinkButton
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Content="Github"
+                            NavigateUri="https://github.sixiaolong.win/" />
+                        <HyperlinkButton
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Content="Twitter"
+                            NavigateUri="https://twitter.sixiaolong.win/" />
+                    </Grid>
+                </Grid>
+
+                <TextBlock
+                    x:Uid="AboutReference"
+                    Grid.Row="7"
+                    Margin="24,18,0,8" />
+
+                <Grid
+                    Grid.Row="8"
+                    Margin="24,1,24,0"
+                    Padding="16"
+                    Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}"
+                    BorderThickness="0"
+                    CornerRadius="4,4,4,4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <HyperlinkButton
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Content="WindowsAppSDK"
+                        NavigateUri="https://aka.ms/windowsappsdk" />
+                    <HyperlinkButton
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Content="Microsoft.Windows.SDK.BuildTools"
+                        NavigateUri="https://www.nuget.org/packages/Microsoft.Windows.SDK.BuildTools/" />
+                    <HyperlinkButton
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Content="Microsoft.Data.Sqlite"
+                        NavigateUri="https://www.nuget.org/packages/Microsoft.Data.Sqlite/" />
+                    <HyperlinkButton
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Content="Newtonsoft.Json"
+                        NavigateUri="https://www.nuget.org/packages/Newtonsoft.Json/" />
+                    <HyperlinkButton
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Content="Microsoft.Windows.CsWin32"
+                        NavigateUri="https://www.nuget.org/packages/Microsoft.Windows.CsWin32/" />
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+        <TeachingTip x:Name="AboutAliPayTips">
+            <TeachingTip.HeroContent>
+                <Image Height="400">
+                    <Image.Source>
+                        <BitmapImage UriSource="/Assets/AliPay.jpg" />
+                    </Image.Source>
+                </Image>
+            </TeachingTip.HeroContent>
+        </TeachingTip>
+        <TeachingTip x:Name="AboutWePayTips">
+            <TeachingTip.HeroContent>
+                <Image Height="400">
+                    <Image.Source>
+                        <BitmapImage UriSource="/Assets/WePay.png" />
+                    </Image.Source>
+                </Image>
+            </TeachingTip.HeroContent>
+        </TeachingTip>
+    </Grid>
+</Page>

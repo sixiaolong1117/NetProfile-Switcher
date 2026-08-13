@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="NetworkSelector/Assets/StoreLogo.scale-200.png" alt="NetProfile Switcher" width="128">
+<img src="NetProfile-Switcher/Assets/StoreLogo.scale-200.png" alt="NetProfile Switcher" width="128">
 
 **A WinUI 3 network preset switching tool for Windows<br/>Quickly switch between multiple IPv4 network configurations, DNS, and DHCP**
 
@@ -58,7 +58,7 @@ It is ideal for frequently switching between direct connections, bypass gateways
 git clone https://github.com/sixiaolong1117/NetProfile-Switcher.git
 ```
 
-2. Open `NetworkSelector.sln` with Visual Studio.
+2. Open `NetProfile-Switcher.sln` with Visual Studio.
 3. Restore NuGet packages.
 4. Select the `x64`, `x86`, or `ARM64` platform, then run or package the app.
 

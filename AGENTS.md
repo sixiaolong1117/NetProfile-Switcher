@@ -8,15 +8,15 @@ NetProfile Switcher：基于 WinUI 3 (Windows App SDK) 的 Windows 网络配置�
 
 ```powershell
 # 还原依赖
-dotnet restore NetworkSelector.sln
+dotnet restore NetProfile-Switcher.sln
 
 # 构建 (必须指定平台)
-dotnet build NetworkSelector.sln -c Release -p:Platform=x64
-dotnet build NetworkSelector.sln -c Release -p:Platform=ARM64
-dotnet build NetworkSelector.sln -c Release -p:Platform=x86
+dotnet build NetProfile-Switcher.sln -c Release -p:Platform=x64
+dotnet build NetProfile-Switcher.sln -c Release -p:Platform=ARM64
+dotnet build NetProfile-Switcher.sln -c Release -p:Platform=x86
 ```
 
-也可通过 Visual Studio 打开 `NetworkSelector.sln` 后构建。
+也可通过 Visual Studio 打开 `NetProfile-Switcher.sln` 后构建。
 
 **注意**：不支持 `dotnet run` 直接运行，必须通过 Visual Studio 或 MSIX 打包部署。
 
@@ -30,7 +30,7 @@ dotnet build NetworkSelector.sln -c Release -p:Platform=x86
 ## 项目结构
 
 ```
-NetworkSelector/
+NetProfile-Switcher/
 ├── App.xaml.cs              # 入口，单实例控制
 ├── MainWindow.xaml.cs       # 主窗口，导航框架 + 背景材质(Mica/Acrylic)
 ├── Pages/

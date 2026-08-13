@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "NetProfile-Switcher (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "NetProfile-Switcher (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
